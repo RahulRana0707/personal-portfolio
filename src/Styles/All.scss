@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --color-light-dark:#62D2A2;
+    --color-light:#9DF3C4;
+    --color-dark:#1FAB89;
+    --color-background:#D7FBE8;
+    --color-white : #fff;
+
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+
+    --card-padding:1.8rem;
+    --padding-1:1.2rem;
+
+    --box-shadow-card:0 .5rem 1rem var(--color-dark);
+    --box-shadow: var(--color-light-dark) 0px 3px 8px;
+}
+.dark-theme-variables{
+    --color-light-dark:#9DF3C4;
+    --color-light:#62D2A2;
+    --color-dark:#D7FBE8;
+    --color-background:#1FAB89;
+    --box-shadow-card:0 .5rem 1rem #D7FBE8;
+    --box-shadow:var(--color-light-dark) 0px 3px 8px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+html{
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+a{
+    color: var(--color-dark);
+}
+img{
+    display: block;
+    width: 100%;
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+h5{
+    font-size: 0.77rem;
+}
+small{
+    font-size: 0.75rem;
+}
+p{
+    color: var(--color-dark-variant);
+}
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.text-muted{
+    color: var(--color-info-dark);
+}
+b{
+    color: var(--color-dark);
+}
+.primary{
+    color: var(--color-primary);
+}
+.danger{
+    color: var(--color-danger);
+}
+.success{
+    color: var(--color-success);
+}
+.warning{
+    color: var(--color-warning);
+}

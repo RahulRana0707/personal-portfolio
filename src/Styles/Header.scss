@@ -1,0 +1,140 @@
+@import "All.scss";
+
+header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  background-color: var(--color-background);
+  height: 6rem;
+  box-shadow: var(--box-shadow);
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+    .first-part {
+      h1 {
+        cursor: pointer;
+      }
+    }
+    .middle-part {
+      .close-btn {
+        display: none;
+        button {
+          font-size: 1.2rem;
+          font-weight: 900;
+          background-color: transparent;
+          padding: 0.6rem 0.8rem;
+          border-radius: 5px;
+          cursor: pointer;
+          color: var(--color-dark);
+          transition: all 0.5ms ease;
+          &:hover {
+            background-color: var(--color-light);
+          }
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        flex-direction: row;
+        li a {
+          font-size: 1.2rem;
+          font-weight: 700;
+          transition: all 500ms ease;
+          &:hover {
+            border-bottom: 1.5px solid var(--color-dark);
+          }
+        }
+      }
+    }
+    .last-part {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        font-size: 1.2rem;
+        font-weight: 900;
+        background-color: transparent;
+        padding: 0.6rem 0.8rem;
+        border-radius: 5px;
+        cursor: pointer;
+        color: var(--color-dark);
+        transition: all 0.5ms ease;
+        &:hover {
+          background-color: var(--color-light);
+        }
+      }
+      .menu {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    .navbar {
+      position: relative;
+      .middle-part {
+        position: absolute;
+        top: 0;
+        left: -100vw;
+        width: 50vw;
+        height: 100vh;
+        background-color: var(--color-background);
+        padding-top: 2rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        box-shadow: var(--box-shadow);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .5s ease;
+        .close-btn {
+          display: block;
+        }
+        ul {
+            flex-direction: column;
+            li a{
+                width: 100%;
+                transition: all .5s ease;
+                &:hover{
+                    margin-left: 2.5rem;
+                }
+            }
+        }
+      }
+      .middle-part.toggle{
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+      .last-part {
+        .menu {
+          display: block;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:300px) {
+  header{
+    .navbar{
+      .first-part{
+        h1{
+          font-size: 1rem;
+        }
+      }
+      .last-part{
+        button{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
