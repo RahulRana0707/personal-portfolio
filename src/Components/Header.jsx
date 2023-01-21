@@ -11,7 +11,7 @@ function Header() {
   };
   const ref = useRef();
   const handleMenu=()=>{
-    ref.current.classList.toggle('toggle');
+    ref.current.classList.toggle('toggle'); 
   }
   return (
     <>
