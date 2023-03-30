@@ -8,7 +8,9 @@ import {
   AiFillHtml5,
   AiFillMail,
 } from "react-icons/ai";
-import { FaGitAlt, FaJava, FaReact } from "react-icons/fa";
+import { FaGitAlt, FaPhoneAlt, FaJava, FaReact } from "react-icons/fa";
+import { MdLocationOn } from "react-icons/md";
+import { RiUser4Line } from "react-icons/ri";
 import {
   IoLogoPython,
   IoLogoWhatsapp,
@@ -21,7 +23,7 @@ import SkillsBox from "./SkillsBox";
 import Project1 from "../Assets/Project1.png";
 import Project2 from "../Assets/Project2.png";
 import ProjectCard from "./ProjectCard";
-import RahulRanaCV from "../Assets/RahulRanaCV.pdf" 
+import RahulRanaCV from "../Assets/RahulRanaCV.pdf";
 function Home() {
   return (
     <>
@@ -69,7 +71,6 @@ function Home() {
       <div id="about" className="about">
         <div className="first-section">
           <h1>about me</h1>
-          <h2>my introduction</h2>
         </div>
         <div className="second-section">
           <div className="svg-section">
@@ -90,7 +91,11 @@ function Home() {
                 <p>completed projects</p>
               </div>
             </div>
-            <a href={RahulRanaCV} download="RahulRanaCV" className="download-cv-button">
+            <a
+              href={RahulRanaCV}
+              download="RahulRanaCV"
+              className="download-cv-button"
+            >
               <h2>download CV</h2>
               <span>
                 <AiOutlineDownload />
@@ -132,28 +137,122 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="contact" className="contact">
-        <div className="text-container">
-          <div className="three-h1">
-            <h1>let's chat.</h1>
-            <h1>how can i help you ?</h1>
-          </div>
-          <p>let's create something together❤️‍🔥</p>
-          <div className="mail-info">
-            <span><AiFillMail/></span>
-            <div className="email-id">
-            <p>mail me at:</p>
-            <b>rr8407084@gmail.com</b>
+      <div id="contact" className="contact-page">
+        <div className="parent-container">
+          <div className="details-container">
+            <div className="circles">
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+            </div>
+            <div className="contact-heading">
+              <h2>Get in Touch with Us</h2>
+            </div>
+            <div className="contact-subheading">
+              <h4>
+                Have a question or feedback? We would love to hear from you!
+              </h4>
+            </div>
+            <div className="contact-details">
+              <div className="phone-detail">
+                <div className="icon">
+                  <FaPhoneAlt />
+                </div>
+                <div className="detail">
+                  <span style={{ marginRight: "4px" }} className="country-code">
+                    +91
+                  </span>
+                  <span className="number">8600639680</span>
+                </div>
+              </div>
+              <div className="email-details">
+                <div className="icon">
+                  <AiFillMail />
+                </div>
+                <div className="detail">
+                  <span
+                    style={{ textTransform: "none" }}
+                    className="email-detail"
+                  >
+                    rr8407084@gmail.com
+                  </span>
+                </div>
+              </div>
+              <div className="address-detail">
+                <div className="icon">
+                  <MdLocationOn />
+                </div>
+                <div className="detail">
+                  <span className="country-name" style={{ marginRight: "4px" }}>
+                    India,
+                  </span>
+                  <span className="state-name">Maharashtra</span>
+                </div>
+              </div>
+            </div>
+            <div className="social-details">
+              <div className="social-icons">
+                <AiFillGithub />
+              </div>
+              <div className="social-icons">
+                <AiFillInstagram />
+              </div>
+              <div className="social-icons">
+                <AiFillLinkedin />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="form-container">
-          <form action="https://formspree.io/f/xoqzvyan" method="POST" >
-            <h1>send me a message❤️</h1>
-            <input name="text" type={"text"} placeholder="Enter Your Name" autoComplete="off"></input>
-            <input name="email" type={"email"} placeholder="Enter Your Email" autoComplete="off"></input>
-            <textarea cols={40} rows={10} name="message" placeholder="tell me something/....." autoComplete="off"></textarea>
-            <button type="submit" name="submit">send</button>
+          <form
+            method="POST"
+            action="https://formspree.io/f/xoqzvyan"
+            className="mail-container"
+          >
+            <div className="username-box">
+              <div className="label">
+                <strong>Your Name</strong>
+              </div>
+              <div className="input-box">
+                <div className="field-icon">
+                  <RiUser4Line />
+                </div>
+                <input
+                  type={"text"}
+                  style={{ textTransform: "none" }}
+                  className="user-name"
+                ></input>
+              </div>
+            </div>
+            <div className="mail-box">
+              <div className="label">
+                <strong>Mail</strong>
+              </div>
+              <div className="input-box">
+                <div className="field-icon">
+                  <AiFillMail />
+                </div>
+                <input
+                  type={"text"}
+                  style={{ textTransform: "none" }}
+                  className="user-mail"
+                ></input>
+              </div>
+            </div>
+            <div className="user-message">
+              <div className="label">
+                <strong>message</strong>
+              </div>
+              <textarea
+                rows={10}
+                name="message"
+                placeholder="Message"
+                autoComplete="off"
+              ></textarea>
+            </div>
+            <div className="submit-box">
+              <button type="submit" name="submit">
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       </div>

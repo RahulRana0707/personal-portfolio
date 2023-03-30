@@ -1,11 +1,10 @@
 @import "All.scss";
 
-
-div{
-    text-align: center;
+div {
+  text-align: center;
 }
-@media screen and (max-width:350px) {
-    div{
-        font-size: .8rem;
-    }
+@media screen and (max-width: 350px) {
+  div {
+    font-size: 0.8rem;
+  }
 }

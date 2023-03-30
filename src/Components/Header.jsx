@@ -1,8 +1,8 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import "../Styles/Header.scss";
-import {HashLink} from "react-router-hash-link"
+import { HashLink } from "react-router-hash-link";
 function Header() {
   const [theme, setTheme] = useState(true);
   const handleTheme = () => {
@@ -10,9 +10,9 @@ function Header() {
     document.body.classList.toggle("dark-theme-variables");
   };
   const ref = useRef();
-  const handleMenu=()=>{
-    ref.current.classList.toggle('toggle'); 
-  }
+  const handleMenu = () => {
+    ref.current.classList.toggle("toggle");
+  };
   return (
     <>
       <header>
@@ -28,19 +28,29 @@ function Header() {
             </div>
             <ul>
               <li>
-                <HashLink to={"/#home"} onClick={handleMenu}>home</HashLink>
+                <HashLink to={"/#home"} onClick={handleMenu}>
+                  home
+                </HashLink>
               </li>
               <li>
-                <HashLink to={"/#about"} onClick={handleMenu}>about</HashLink>
+                <HashLink to={"/#about"} onClick={handleMenu}>
+                  about
+                </HashLink>
               </li>
               <li>
-                <HashLink to={"/#skills"} onClick={handleMenu}>skills</HashLink>
+                <HashLink to={"/#skills"} onClick={handleMenu}>
+                  skills
+                </HashLink>
               </li>
               <li>
-                <HashLink to={"/#projects"} onClick={handleMenu}>projects</HashLink>
+                <HashLink to={"/#projects"} onClick={handleMenu}>
+                  projects
+                </HashLink>
               </li>
               <li>
-                <HashLink to={"/#contact"} onClick={handleMenu}>contact</HashLink>
+                <HashLink to={"/#contact"} onClick={handleMenu}>
+                  contact
+                </HashLink>
               </li>
             </ul>
           </div>
